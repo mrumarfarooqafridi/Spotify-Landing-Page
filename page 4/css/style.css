@@ -1,0 +1,179 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: white;
+  min-height: 100vh;
+}
+header {
+  background-color: #010101;
+}
+footer {
+  background-color: #010101;
+}
+#questions {
+  background-color: #010101;
+}
+#headerPara {
+  font-size: 11px;
+}
+p {
+  font-size: 12px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.voucher-code {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: linear-gradient(45deg, #1db954, #1ed760);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px dashed #1db954;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.8);
+  }
+}
+
+.timer {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.beat {
+  width: 20px;
+  height: 10px;
+  background: #1db954;
+  margin: 0 5px;
+  border-radius: 10px;
+  animation: beat 1s infinite ease-in-out;
+}
+
+.beat:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.beat:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.beat:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.beat:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(3);
+  }
+}
+
+.beats-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.95);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.beats-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Desktop-specific styles */
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+
+  #redeem-section {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .voucher-code {
+    font-size: 2.2rem;
+    padding: 1.5rem;
+  }
+
+  #redeem-btn {
+    padding: 0.8rem 3rem;
+    font-size: 1.2rem;
+  }
+
+  .invoice {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .invoice .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .invoice .row p {
+    flex: 1;
+    text-align: center;
+  }
+
+  footer .container {
+    max-width: 600px;
+  }
+
+  #questions {
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+  }
+
+  #questions h6 {
+    font-size: 1.2rem;
+  }
+
+  #questions p {
+    font-size: 1rem;
+  }
+
+  .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+}
